@@ -1,0 +1,449 @@
+/* ========================================
+   T.A.T.A. Vacation Rental
+   San Antonio, Texas
+   ======================================== */
+
+
+/* ---------- BASIC RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f6f2;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #315c4a;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #315c4a;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("https://images.unsplash.com/photo-1505691938895-1758d7feb511")
+        center center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+
+    padding: 6rem 1.5rem 3rem;
+}
+
+.hero-overlay {
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.eyebrow {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+    color: #f1d9a7;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 span {
+    display: block;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+}
+
+.hero-content > p:last-of-type {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.button {
+    display: inline-block;
+
+    background-color: #315c4a;
+    color: white;
+
+    padding: 0.9rem 2rem;
+
+    border: none;
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #244638;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- GENERAL SECTIONS ---------- */
+
+.section,
+.features-section,
+.contact-section {
+    padding: 5rem 1.5rem;
+}
+
+.section-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-label {
+    color: #315c4a;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.75rem;
+}
+
+.section h2,
+.features-section h2,
+.contact-section h2 {
+    color: #2f3e36;
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-content > p:not(.section-label) {
+    max-width: 750px;
+    margin: 0 auto 1rem;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+
+/* ---------- ABOUT SECTION ---------- */
+
+.section {
+    background-color: #ffffff;
+}
+
+
+/* ---------- FEATURES ---------- */
+
+.features-section {
+    background-color: #f1eee8;
+}
+
+.features-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background-color: white;
+
+    padding: 2rem;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #315c4a;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.98rem;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact-section {
+    background-color: #ffffff;
+}
+
+.contact-section .section-content > p:not(.section-label) {
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto 0;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+
+    gap: 0.5rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #333;
+    margin-top: 0.75rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 0.9rem;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+    background-color: #fafafa;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+
+    border-color: #315c4a;
+
+    box-shadow:
+        0 0 0 3px rgba(49, 92, 74, 0.12);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.contact-form .button {
+    margin-top: 1rem;
+    align-self: center;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: #2f3e36;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 2.5rem 1.5rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.practice-note {
+    margin-top: 1rem;
+
+    color: #c9d0cb;
+
+    font-size: 0.85rem;
+}
+
+
+/* ---------- ANIMATION ---------- */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h1 span {
+        font-size: 1.6rem;
+    }
+
+    .hero-content > p:last-of-type {
+        font-size: 1.1rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2,
+    .features-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .nav-links {
+        gap: 1.2rem;
+    }
+
+    .hero {
+        padding-top: 8rem;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero h1 span {
+        font-size: 1.3rem;
+    }
+
+    .hero-content > p:last-of-type {
+        font-size: 1rem;
+    }
+
+    .section,
+    .features-section,
+    .contact-section {
+        padding: 4rem 1rem;
+    }
+
+}
